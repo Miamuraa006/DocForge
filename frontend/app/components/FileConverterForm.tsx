@@ -10,6 +10,9 @@ type FileConverterFormProps = {
   endpoint: string;
   accept: string;
   helperText: string;
+  downloadFilename?: string;
+  downloadLabel?: string;
+  successMessage?: string;
 };
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
@@ -25,6 +28,9 @@ export function FileConverterForm({
   endpoint,
   accept,
   helperText,
+  downloadFilename = "converted.pdf",
+  downloadLabel = "Download PDF",
+  successMessage = "PDF is ready.",
 }: FileConverterFormProps) {
   const [file, setFile] = useState<File | null>(null);
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
@@ -102,7 +108,7 @@ export function FileConverterForm({
 
       const blob = await response.blob();
       setDownloadUrl(URL.createObjectURL(blob));
-      setMessage("PDF is ready.");
+      setMessage(successMessage);
       setMessageType("success");
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Conversion failed.");
@@ -197,11 +203,11 @@ export function FileConverterForm({
         {downloadUrl ? (
           <a
             href={downloadUrl}
-            download="converted.pdf"
+            download={downloadFilename}
             className="mt-4 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-moss px-5 text-sm font-semibold text-white transition hover:bg-[#285640] focus:outline-none focus:ring-4 focus:ring-moss/25"
           >
             <Download className="h-5 w-5" aria-hidden="true" />
-            Download PDF
+            {downloadLabel}
           </a>
         ) : null}
       </form>

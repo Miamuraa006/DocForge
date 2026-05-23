@@ -8,4 +8,5 @@ services:
     envVars:
       - key: FRONTEND_ORIGINS
         value: http://localhost:3000,http://127.0.0.1:3000
-
+      - key: FRONTEND_ORIGIN_REGEX
+        value: https://.*\.vercel\.app

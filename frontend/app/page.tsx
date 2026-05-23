@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, FileText, Image, Type } from "lucide-react";
+import { ArrowRight, FileText, Image, PenTool, Ruler, Type } from "lucide-react";
 
 const features = [
   {
@@ -26,6 +26,30 @@ const features = [
     icon: Type,
     color: "text-skyline",
   },
+  {
+    title: "Vector to PDF",
+    description: "Convert SVG vector files.",
+    meta: "SVG",
+    href: "/vector-to-pdf",
+    icon: PenTool,
+    color: "text-moss",
+  },
+  {
+    title: "DXF to PDF",
+    description: "Convert CAD drawings to PDF.",
+    meta: "DXF",
+    href: "/dxf-to-pdf",
+    icon: Ruler,
+    color: "text-skyline",
+  },
+  {
+    title: "Image to DXF",
+    description: "Trace PNG and JPEG images into DXF.",
+    meta: "PNG, JPEG",
+    href: "/image-to-dxf",
+    icon: Image,
+    color: "text-coral",
+  },
 ];
 
 export default function Home() {
@@ -46,11 +70,11 @@ export default function Home() {
             DocForge
           </h1>
           <p className="mt-4 text-lg leading-8 text-neutral-700">
-            Convert documents, images, and text to PDF.
+            Convert documents, images, text, vectors, and CAD files.
           </p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => {
             const Icon = feature.icon;
 

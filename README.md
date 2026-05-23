@@ -1,6 +1,6 @@
 # DocForge
 
-Simple MVP web app for converting Word documents, images, and text to PDF.
+Simple MVP web app for converting documents, images, text, vectors, and CAD files.
 
 ## Project Structure
 
@@ -37,6 +37,18 @@ API endpoints:
 - `POST /api/word-to-pdf`
 - `POST /api/image-to-pdf`
 - `POST /api/text-to-pdf`
+- `POST /api/vector-to-pdf`
+- `POST /api/dxf-to-pdf`
+- `POST /api/image-to-dxf`
+
+Supported MVP formats:
+
+- Word to PDF: `.doc`, `.docx`
+- Image to PDF: `.jpg`, `.jpeg`, `.png`
+- Text to PDF: typed or pasted text
+- Vector to PDF: `.svg`
+- DXF to PDF: `.dxf`
+- Image to DXF: `.jpg`, `.jpeg`, `.png`
 
 ## Frontend
 
