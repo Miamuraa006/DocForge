@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Download, Loader2, Type, Wand2 } from "lucide-react";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
+const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? "";
 const maxTextSize = 10 * 1024 * 1024;
 
 export function TextConverterForm() {

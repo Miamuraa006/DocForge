@@ -70,10 +70,10 @@ Then open:
 http://localhost:3000
 ```
 
-The frontend expects the backend at `http://localhost:8000`. To use a different API URL, create `frontend/.env.local`:
+The frontend proxies `/api/*` requests to the backend. To use a different backend URL locally, create `frontend/.env.local`:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:8000
+BACKEND_URL=http://localhost:8000
 ```
 
 ## Deploy
@@ -92,7 +92,7 @@ FRONTEND_ORIGINS=https://your-frontend-domain.vercel.app
 Frontend environment variables:
 
 ```env
-NEXT_PUBLIC_API_URL=https://your-backend-domain.onrender.com
+BACKEND_URL=https://your-backend-domain.onrender.com
 ```
 
 For Render, the repository includes `render.yaml` and `backend/Dockerfile`.
