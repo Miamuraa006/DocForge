@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: docforge-api
+    env: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /docs
+    envVars:
+      - key: FRONTEND_ORIGINS
+        value: http://localhost:3000,http://127.0.0.1:3000
+
