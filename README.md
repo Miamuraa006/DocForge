@@ -37,7 +37,9 @@ API endpoints:
 - `POST /api/word-to-pdf`
 - `POST /api/image-to-pdf`
 - `POST /api/text-to-pdf`
+- `POST /api/image-to-svg`
 - `POST /api/vector-to-pdf`
+- `POST /api/svg-to-dxf`
 - `POST /api/dxf-to-pdf`
 - `POST /api/image-to-dxf`
 
@@ -46,9 +48,11 @@ Supported MVP formats:
 - Word to PDF: `.doc`, `.docx`
 - Image to PDF: `.jpg`, `.jpeg`, `.png`
 - Text to PDF: typed or pasted text
+- Image to SVG: `.jpg`, `.jpeg`, `.png`
 - Vector to PDF: `.svg`
+- SVG to DXF: `.svg`
 - DXF to PDF: `.dxf`
-- Image to DXF: `.jpg`, `.jpeg`, `.png`
+- Image to DXF: `.jpg`, `.jpeg`, `.png` through an SVG intermediate
 
 ## Frontend
 

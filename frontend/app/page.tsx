@@ -35,6 +35,22 @@ const features = [
     color: "text-moss",
   },
   {
+    title: "Image to SVG",
+    description: "Trace PNG and JPEG images into SVG.",
+    meta: "PNG, JPEG",
+    href: "/image-to-svg",
+    icon: PenTool,
+    color: "text-coral",
+  },
+  {
+    title: "SVG to DXF",
+    description: "Convert SVG vector files into DXF.",
+    meta: "SVG",
+    href: "/svg-to-dxf",
+    icon: Ruler,
+    color: "text-moss",
+  },
+  {
     title: "DXF to PDF",
     description: "Convert CAD drawings to PDF.",
     meta: "DXF",
@@ -44,8 +60,8 @@ const features = [
   },
   {
     title: "Image to DXF",
-    description: "Trace PNG and JPEG images into DXF.",
-    meta: "PNG, JPEG",
+    description: "Trace images through SVG into DXF.",
+    meta: "PNG -> SVG -> DXF",
     href: "/image-to-dxf",
     icon: Image,
     color: "text-coral",

@@ -4,7 +4,7 @@ export default function ImageToDxfPage() {
   return (
     <FileConverterForm
       title="Image to DXF"
-      description="Upload a PNG or JPEG image and trace it into a DXF file."
+      description="Upload a PNG or JPEG image. DocForge traces it to SVG first, then converts the SVG to DXF."
       endpoint="/api/image-to-dxf"
       accept=".jpg,.jpeg,.png,image/jpeg,image/png"
       helperText="PNG, JPG, and JPEG files up to 10MB"
@@ -14,4 +14,3 @@ export default function ImageToDxfPage() {
     />
   );
 }
-
